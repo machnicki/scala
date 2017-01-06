@@ -1,10 +1,12 @@
-name := """hello-scala"""
+name := "My sample project"
 
 version := "1.0"
 
+lazy val root = (project in file(".")).enablePlugins(PlayScala)
+
 scalaVersion := "2.11.7"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "2.2.4" % "test"
-
-
-fork in run := true
+libraryDependencies += jdbc
+libraryDependencies += cache
+libraryDependencies += ws
+libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "1.5.1" % Test
