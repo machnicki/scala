@@ -1,0 +1,14 @@
+@(partials: List[Partial])
+
+@main("Partials list") {
+    <div>
+        <h2>List of partials</h2>
+        <ul>
+        @partials.map { partial =>
+            <li>
+                @partial.name
+            </li>
+        }
+        </ul>
+    </div>
+}
